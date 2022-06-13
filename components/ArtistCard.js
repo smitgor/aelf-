@@ -50,7 +50,7 @@ export default function ArtistCard(props) {
                         <h1 class="text-xl font-semibold text-gray-800 dark:text-white">{props.title}</h1>
 
                         <p class="py-2 text-gray-700 dark:text-gray-400">{props.elevatorPitch}asfdmnhasgfjy dsfjsdgdf yusuyffgsjfgffsdjfhghjysdd<br></br>askfuhasufdhgjhhgg</p>
-                        
+                        <p >Type: {props.type}</p>
                     </div>
                     <div class="p-2 justify-self-end">
                         <Button color="gray" size="lg" ripple="light" onClick={(e) => setShowModal(true)}>

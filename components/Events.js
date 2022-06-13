@@ -104,7 +104,7 @@ export default function Events(props){
                                 elevatorPitch={doc.elevatorPitch}
                                 description={doc.description}
                                 imgLink={doc.imgLink}
-                                value={doc.value}
+                                type={doc.type}
                                 currentStatus={doc.currentStatus}
                                 rasied={doc.rasied}
                                 complete={doc.complete}
@@ -127,7 +127,7 @@ export default function Events(props){
                                 elevatorPitch={doc.elevatorPitch}
                                 description={doc.description}
                                 imgLink={doc.imgLink}
-                                value={doc.value}
+                                type={doc.type}
                                 currentStatus={doc.currentStatus}
                                 rasied={doc.rasied}
                                 complete={doc.complete}
@@ -150,7 +150,7 @@ export default function Events(props){
                                 elevatorPitch={doc.elevatorPitch}
                                 description={doc.description}
                                 imgLink={doc.imgLink}
-                                value={doc.value}
+                                type={doc.type}
                                 currentStatus={doc.currentStatus}
                                 rasied={doc.rasied}
                                 complete={doc.complete}
@@ -173,7 +173,7 @@ export default function Events(props){
                                 elevatorPitch={doc.elevatorPitch}
                                 description={doc.description}
                                 imgLink={doc.imgLink}
-                                value={doc.value}
+                                type={doc.type}
                                 currentStatus={doc.currentStatus}
                                 rasied={doc.rasied}
                                 complete={doc.complete}
