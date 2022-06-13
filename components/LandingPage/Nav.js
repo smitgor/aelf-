@@ -1,4 +1,4 @@
-import ConnectMatamask from "../modal/ConnectMatamask"
+
 function Nav() {
   return (
     <header className="text-gray-400 bg-gray-900 body-font">
@@ -23,7 +23,6 @@ function Nav() {
           <a href="#About" className="mr-5 hover:text-white">About Money Money</a>
         </nav>
 
-        <ConnectMatamask text="Connect Metamask" color="blueGray" />
 
       </div>
     </header>
