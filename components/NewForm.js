@@ -61,7 +61,7 @@ export default function NewForm() {
                     color="lightBlue"
                     size="lg"
                     outline={true}
-                    placeholder="Evlevator Pitch"
+                    placeholder="Short Description"
                     name="elevatorPitch"
                     onChange={handleEPitchChange}
                 />
@@ -82,7 +82,7 @@ export default function NewForm() {
                     color="lightBlue"
                     size="lg"
                     outline={true}
-                    placeholder="Require Amount"
+                    placeholder="Number of Tickets"
                     name="amount"
                     onChange={handleAmountChange}
                 />
@@ -107,9 +107,10 @@ export default function NewForm() {
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" name="status"
                             onChange={handleStatusChange}
                         >
-                            <option selected>Current Status</option>
-                            <option value="1">On Going</option>
-                            <option value="0">Finished</option>
+                            <option selected>Choose Type</option>
+                            <option value="1">Sport</option>
+                            <option value="2">Game</option>
+                            <option value="3">Party</option>
                         </select>
                     </div>
                 </div>

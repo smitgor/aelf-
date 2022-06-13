@@ -253,7 +253,7 @@ export default function Hero() {
                         </TabPane>
                         <TabPane active={openTab === 2 ? true : false}>
                             <div class="grid grid-cols-3 gap-5">
-                                <NewIdeas doc={docs} loading={loading}/>
+                                <NewIdeas doc={d} loading={loading}/>
                             </div>
                         </TabPane>
                         <TabPane active={openTab === 3 ? true : false}>
