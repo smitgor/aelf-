@@ -6,7 +6,7 @@ import TabContent from "@material-tailwind/react/TabContent";
 import TabPane from "@material-tailwind/react/TabPane";
 import ArtistCard from "../ArtistCard";
 import NewForm from "../NewForm";
-import TrendingCard from "../TrendingCard";
+import Events from "../Events";
 import NewIdeas from "../NewIdeas";
 import MyCampaigns from "../MyCampaigns";
 import MyContributions from "../MyContributions";
@@ -19,16 +19,193 @@ export default function Hero() {
     const [docs2, setDocs2] = useState([]);
     const [update,setUpdate] = useState(0);
     const [loading, setLoading] = useState(false);
-    
+    const d = [
+        {
+                   
+                "title":"a new coin",
+                   "elevatorPitch":"it will change the world",
+                   "description":"it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool",
+                   "imgLink":"https://i.imgur.com/htS3GSE.jpg",
+                   "type":"party",
+                   "currentStatus":"ONGOING",
+                   "rasied":1000,
+                   "complete":"false",
+                   "approvalCount":4,
+                   "likes":9443,
+                   "requests":[
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                   ]
+                },
+        {
+                   
+                "title":"a new coin",
+                   "elevatorPitch":"it will change the world",
+                   "description":"it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool",
+                   "imgLink":"https://i.imgur.com/htS3GSE.jpg",
+                   "type":"party",
+                   "currentStatus":"ONGOING",
+                   "rasied":1000,
+                   "complete":"false",
+                   "approvalCount":4,
+                   "likes":9443,
+                   "requests":[
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                   ]
+                },
+                {
+                   "title":"a new coin",
+                   "elevatorPitch":"it will change the world",
+                   "description":"it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool",
+                   "imgLink":"https://i.imgur.com/htS3GSE.jpg",
+                   "type":"sport",
+                   "currentStatus":"ONGOING",
+                   "rasied":5000,
+                   "complete":"false",
+                   "approvalCount":4,
+                   "likes":94,
+                   "requests":[
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                   ]
+                },
+                {
+                   "title":"a new coin",
+                   "elevatorPitch":"it will change the world",
+                   "description":"it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool",
+                   "imgLink":"https://i.imgur.com/htS3GSE.jpg",
+                   "type":"game",
+                   "currentStatus":"ONGOING",
+                   "rasied":5000,
+                   "complete":"false",
+                   "approvalCount":4,
+                   "likes":43,
+                   "requests":[
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                   ]
+                },
+                {
+                   "title":"a new coin",
+                   "elevatorPitch":"it will change the world",
+                   "description":"it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool",
+                   "imgLink":"https://i.imgur.com/htS3GSE.jpg",
+                   "type":"game",
+                   "currentStatus":"ONGOING",
+                   "rasied":5000,
+                   "complete":"false",
+                   "approvalCount":4,
+                   "likes":43,
+                   "requests":[
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                   ]
+                },
+                {
+                   "title":"a new coin",
+                   "elevatorPitch":"it will change the world",
+                   "description":"it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool it will change the world by making everyone fool",
+                   "imgLink":"https://i.imgur.com/htS3GSE.jpg",
+                   "type":"game",
+                   "currentStatus":"ONGOING",
+                   "rasied":5000,
+                   "complete":"false",
+                   "approvalCount":4,
+                   "likes":93,
+                   "requests":[
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                       {
+                           "title":"a new title",
+                           "description":"a new description",
+                           "amount":1000,
+                       },
+                   ]
+                }
+            ]
 
     return (
         <>
 
-            <section className="text-gray-400 bg-gray-900 flex ">
+            <section className="text-gray-400 bg-gray-900 p-1">
                 <Tab className="bg-gray-900">
-                    <div>
-                        <TabList color="green">
-                            <TabItem
+                    <div className="w-full">
+                        <TabList color="">
+                            <TabItem 
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setOpenTab(1);
@@ -37,8 +214,9 @@ export default function Hero() {
                                 ripple="light"
                                 active={openTab === 1 ? true : false}
                                 href="tabItem"
+                                className="mx-8"
                             >
-                                Trending Ideas
+                                Events
                             </TabItem>
                             <TabItem
                                 onClick={(e) => {
@@ -48,8 +226,9 @@ export default function Hero() {
                                 ripple="light"
                                 active={openTab === 2 ? true : false}
                                 href="tabItem"
+                                className="mx-4"
                             >
-                                New Ideas
+                                My Ticket NFT's
                             </TabItem>
                             <TabItem
                                 onClick={(e) => {
@@ -59,38 +238,17 @@ export default function Hero() {
                                 ripple="light"
                                 active={openTab === 3 ? true : false}
                                 href="tabItem"
+                                className="mx-4"
                             >
-                                My Contributions
-                            </TabItem>
-                            <TabItem
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setOpenTab(4);
-                                }}
-                                ripple="light"
-                                active={openTab === 4 ? true : false}
-                                href="tabItem"
-                            >
-                                New Campaign
-                            </TabItem>
-                            <TabItem
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setOpenTab(5);
-                                }}
-                                ripple="light"
-                                active={openTab === 5 ? true : false}
-                                href="tabItem"
-                            >
-                                My Campaigns
+                                Create Event
                             </TabItem>
                         </TabList>
                     </div>
 
                     <TabContent>
                         <TabPane active={openTab === 1 ? true : false}>
-                            <div class="grid grid-cols-3 gap-10">
-                                <TrendingCard doc={docs} loading={loading}/>
+                            <div>
+                                <Events doc={d} loading={loading}/>
                             </div>
                         </TabPane>
                         <TabPane active={openTab === 2 ? true : false}>
@@ -99,18 +257,8 @@ export default function Hero() {
                             </div>
                         </TabPane>
                         <TabPane active={openTab === 3 ? true : false}>
-                            <div class="grid grid-cols-3 gap-5">
-                                <MyContributions doc={docs} loading={loading}/>
-                            </div>
-                        </TabPane>
-                        <TabPane active={openTab === 4 ? true : false}>
-                            <div class="items-center m-auto w-1/2">
+                            <div class="mx-24 w-1/2">
                                 <NewForm/>
-                            </div>
-                        </TabPane>
-                        <TabPane active={openTab === 5 ? true : false}>
-                            <div class="grid grid-cols-3 gap-5">
-                                <MyCampaigns doc={docs2} loading={loading}/>
                             </div>
                         </TabPane>
                     </TabContent>

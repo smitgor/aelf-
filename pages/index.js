@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Welcome to Money Money</title>
+        <title>Welcome to DON"T KNOW NAME</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />

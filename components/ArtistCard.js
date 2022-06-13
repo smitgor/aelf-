@@ -16,9 +16,6 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalFooter from "@material-tailwind/react/ModalFooter";
 
 
-import { ethers } from 'ethers'
-import Web3Modal from 'web3modal'
-
 export default function ArtistCard(props) {
     const [showModal, setShowModal] = React.useState(false);
     const [siteName, setSiteName] = React.useState('');
@@ -39,240 +36,7 @@ export default function ArtistCard(props) {
             setLikes(parseInt(likes) + 1);
         setLiked(!liked);
     };
-    const campAbi = [
-        {
-            "inputs": [
-                {
-                    "internalType": "string",
-                    "name": "title",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "desc",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "goal",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "string",
-                    "name": "pic",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "pitch",
-                    "type": "string"
-                }
-            ],
-            "stateMutability": "nonpayable",
-            "type": "constructor"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "index",
-                    "type": "uint256"
-                }
-            ],
-            "name": "approvalRequest",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "c",
-            "outputs": [
-                {
-                    "internalType": "string",
-                    "name": "_title",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_desc",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_goal",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_collected",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_ig",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_likes",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "enum Campaign.status",
-                    "name": "s",
-                    "type": "uint8"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_pic",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_pitch",
-                    "type": "string"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "contribute",
-            "outputs": [],
-            "stateMutability": "payable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "string",
-                    "name": "description",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "value",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "address",
-                    "name": "recipient",
-                    "type": "address"
-                }
-            ],
-            "name": "createRequest",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "index",
-                    "type": "uint256"
-                }
-            ],
-            "name": "finalizeRequest",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "likeCamp",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "manager",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "minAmount",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "req",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "name": "requests",
-            "outputs": [
-                {
-                    "internalType": "string",
-                    "name": "description",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "value",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "address",
-                    "name": "recipient",
-                    "type": "address"
-                },
-                {
-                    "internalType": "bool",
-                    "name": "complete",
-                    "type": "bool"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "approvalCount",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "unlikeCamp",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        }
-    ];
+
     return (
         <div className="" key={props.key}>
             <div class="max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:scale-110 duration-150">
@@ -281,68 +45,17 @@ export default function ArtistCard(props) {
                     alt="Card Image"
                     className="h-60 w-full"
                 />
+                <CardFooter className="grid grid-cols-1  ">
+                    <div class="p-2 text-left">
+                        <h1 class="text-xl font-semibold text-gray-800 dark:text-white">{props.title}</h1>
 
-                <div class="px-6 py-4">
-                    <h1 class="text-xl font-semibold text-gray-800 dark:text-white">{props.title}</h1>
-
-                    <p class="py-2 text-gray-700 dark:text-gray-400">{props.elevatorPitch}</p>
-
-                    <div class="px-2 text-sm mt-2 mb-2 text-gray-700 dark:text-gray-200 float-left">Toal Require Amount</div>
-                    <div class="px-2 text-sm mt-2 mb-2 text-gray-700 dark:text-gray-200 float-right">{props.value} ETH</div>
-                    <div class="px-2 text-sm mt-2 mb-2 text-gray-700 dark:text-gray-200 float-left">Total Rasied Amount</div>
-                    <div class="px-2 text-sm mt-2 mb-2 text-gray-700 dark:text-gray-200 float-right">{props.rasied}  ETH</div>
-                    
-                </div>
-                <CardFooter>
-                    <div class="p-2 float-left">
-                        <Button color="lightBlue" onClick={async () => {
-
-                             const web3Modal = new Web3Modal();
-                             const connection = await web3Modal.connect();
-                             const provider = new ethers.providers.Web3Provider(connection);
-                            const signer = provider.getSigner();
-
-                             const campContract = new ethers.Contract(props.complete,campAbi,signer);
-                             const tx = await campContract.contribute({
-                                value: 10
-                            })
-
-                             
-                            console.log(tx.value.toString());
-            
-                        }} size="lg" ripple="light" >
-                            Contribute
-                        </Button>
+                        <p class="py-2 text-gray-700 dark:text-gray-400">{props.elevatorPitch}asfdmnhasgfjy dsfjsdgdf yusuyffgsjfgffsdjfhghjysdd<br></br>askfuhasufdhgjhhgg</p>
+                        
                     </div>
-                    <div class="px-2 text-sm mt-2 mb-2 text-gray-700 dark:text-gray-200 float-right">
-                        <div class="grid grid-rows-1 grid-flow-col gap-4">
-                            <div class="float-center">
-                                <div style={{
-                                    margin: 'auto',
-                                    display: 'block',
-                                    width: 'fit-content'
-                                }}>
-                                    <FormControlLabel onClick={handleLike}
-                                        control={<Checkbox icon={<FavoriteBorder />}
-                                            checkedIcon={<Favorite />}
-                                            name="checkedH" />}
-                                        label={likes}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-2 w-1/2">
+                    <div class="p-2 justify-self-end">
                         <Button color="gray" size="lg" ripple="light" onClick={(e) => setShowModal(true)}>
                             Read More..
                         </Button>
-                    </div>
-                    <div>
-                        <input class="rounded-lg overflow-hidden h-2 w-full" type="range" 
-                            min="1" 
-                            max="100" 
-                            value={props.rasied*100/props.value} 
-                        />
                     </div>
                 </CardFooter>
             </div>
