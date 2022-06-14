@@ -33,8 +33,6 @@ export default function Events(props){
                         onClick={(e) => {
                             e.preventDefault();
                         }}
-                        disabled
-                        ripple="light"
                         active = {false}
                         href="tabItem"
                         className="ml-4 font-Blod h-8"
