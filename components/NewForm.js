@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import Input from "@material-tailwind/react/Input";
 import Textarea from "@material-tailwind/react/Textarea";
 import Button from "@material-tailwind/react/Button";
-import { create as ipfsHttpClient } from 'ipfs-http-client'
+// import { create as ipfsHttpClient } from 'ipfs-http-client'
 
-import { ethers } from 'ethers'
-import Web3Modal from 'web3modal'
+// import { ethers } from 'ethers'
+// import Web3Modal from 'web3modal'
 
 
 export default function NewForm() {
-    const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
+    // const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
     const [title, setTitle] = useState('');
     const [ePitch, setEPitch] = useState('');
     const [des, setDes] = useState('');

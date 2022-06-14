@@ -5,6 +5,8 @@ import TabItem from "@material-tailwind/react/TabItem";
 import TabContent from "@material-tailwind/react/TabContent";
 import TabPane from "@material-tailwind/react/TabPane";
 import ArtistCard from "./ArtistCard";
+import MyTickets from "./MyTickets";
+
 
 export default function NewIdeas(props){
     console.log(props.doc);
@@ -24,7 +26,7 @@ export default function NewIdeas(props){
         <>
             {props.doc.map((doc, index) => {
                 return (
-                    <ArtistCard 
+                    <MyTickets 
                         key={index}
                         title={doc.title}
                         elevatorPitch={doc.elevatorPitch}

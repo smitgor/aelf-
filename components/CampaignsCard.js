@@ -17,8 +17,8 @@ import ModalFooter from "@material-tailwind/react/ModalFooter";
 import Input from "@material-tailwind/react/Input";
 import Textarea from "@material-tailwind/react/Textarea";
 
-import { ethers } from 'ethers'
-import Web3Modal from 'web3modal'
+// import { ethers } from 'ethers'
+// import Web3Modal from 'web3modal'
 
 
 export default function CampaignsCard(props) {
@@ -295,20 +295,7 @@ export default function CampaignsCard(props) {
         console.log(title, des, amount);
     };
 
-    const handleRequest = async (e) => {
-    // e.preventDefault();
-        console.log("Create Request!!");
-        const web3Modal = new Web3Modal();
-        const connection = await web3Modal.connect();
-        const provider = new ethers.providers.Web3Provider(connection);
-        const signer = provider.getSigner();
-
-        const campContract = new ethers.Contract(props.complete,campAbi,signer);
-
-        const tx = campContract.createRequest(des,amount,title);
-        console.log(tx);
-
-    }
+   
     return (
         <div className="" key={props.key}>
             <div class="max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:scale-110 duration-150">
@@ -444,7 +431,7 @@ export default function CampaignsCard(props) {
                 <ModalFooter>
                     <Button
                         color="lightBlue"
-                        onClick={handleRequest()}
+                        onClick =""
                         ripple="light"
                     >
                         Save
