@@ -14,7 +14,9 @@ export default function NewForm() {
     const [ePitch, setEPitch] = useState('');
     const [des, setDes] = useState('');
     const [img, setImg] = useState();
-    const [amount, setAmount] = useState(0);
+    const [date, setDate] = useState(0);
+    const [ticket, setTicket] = useState(0);
+    const [time, setTime] = useState(0);
     const [status, setStatus] = useState(0);
 
 
@@ -27,8 +29,14 @@ export default function NewForm() {
     const handleDesChange = event => {
         setDes(event.target.value)
     };
-    const handleAmountChange = event => {
-        setAmount(event.target.value)
+    const handleTicketChange = event => {
+        setTicket(event.target.value)
+    };
+    const handleDateChange = event => {
+        setDate(event.target.value)
+    };
+    const handleTimeChange = event => {
+        setTime(event.target.value)
     };
     const handleStatusChange = event => {
         setStatus(event.target.value)
@@ -39,7 +47,7 @@ export default function NewForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(title, ePitch, des, amount, status,img);
+        console.log(title, ePitch, des, date, ticket, time, status,img);
         
     };
     return (
@@ -84,7 +92,29 @@ export default function NewForm() {
                     outline={true}
                     placeholder="Number of Tickets"
                     name="amount"
-                    onChange={handleAmountChange}
+                    onChange={handleTicketChange}
+                />
+            </div>
+            <div class="w-2/5 p-5">
+                <Input
+                    type="date"
+                    color="lightBlue"
+                    size="lg"
+                    outline={true}
+                    placeholder="Date"
+                    name="date"
+                    onChange={handleDateChange}
+                />
+            </div>
+            <div class="w-2/5 p-5">
+                <Input
+                    type="time"
+                    color="lightBlue"
+                    size="lg"
+                    outline={true}
+                    placeholder="Time"
+                    name="time"
+                    onChange={handleTimeChange}
                 />
             </div>
             <div class="w-2/5 p-5">
